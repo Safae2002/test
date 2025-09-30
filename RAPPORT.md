@@ -29,9 +29,7 @@
 - Toutes les Q initiales = 0.0
 
 **Règle (une ligne)**  
-\[
-Q_{\text{new}}(s,a) = (1-\alpha)\cdot Q_{\text{old}}(s,a)\;+\;\alpha\cdot\big(r + \gamma \cdot \max_{a'} Q(s',a')\big)
-\]
+![Régle générale de calcul](./screenshots/regle1.png)
 
 ---
 
@@ -41,21 +39,38 @@ Q_{\text{new}}(s,a) = (1-\alpha)\cdot Q_{\text{old}}(s,a)\;+\;\alpha\cdot\big(r 
 
 ##### Transition 1
 **(0,0) --N→ (0,1)**  
-Relation :
+On applique la règle de mise à jour :
+
 \[
 Q_{\text{new}}((0,0),N) = (1-0.5)\cdot Q_{\text{old}}((0,0),N) + 0.5\cdot\big(0 + 0.9\cdot\max Q((0,1),\cdot)\big)
 \]
+
 Valeurs utilisées :
-- \(Q_{\text{old}}((0,0),N) = 0.0\)  
-- \(r = 0\)  
-- \(\max Q((0,1),\cdot) = 0.0\) (pas encore appris)
-Calculs :
-- \((1-0.5)\cdot Q_{\text{old}} = 0.5 \times 0.0 = 0.0\)  
-- \(\gamma \cdot \max Q = 0.9 \times 0.0 = 0.0\)  
-- \(r + \gamma\cdot\max Q = 0 + 0.0 = 0.0\)  
-- \(\alpha \times (...) = 0.5 \times 0.0 = 0.0\)  
-- Somme = \(0.0 + 0.0 = 0.0\)  
-**->** `Q((0,0),N) = 0.000`
+- \( Q_{\text{old}}((0,0),N) = 0.0 \)  
+- \( r = 0 \)  
+- \( \max Q((0,1),\cdot) = 0.0 \) (pas encore appris)
+
+Calculs pas à pas :
+\[
+(1-0.5)\cdot Q_{\text{old}} = 0.5 \times 0.0 = 0.0
+\]
+
+\[
+\gamma \cdot \max Q = 0.9 \times 0.0 = 0.0
+\]
+
+\[
+r + \gamma \cdot \max Q = 0 + 0.0 = 0.0
+\]
+
+\[
+\alpha \times (...) = 0.5 \times 0.0 = 0.0
+\]
+
+\[
+Q_{\text{new}}((0,0),N) = 0.0 + 0.0 = \mathbf{0.000}
+\]
+
 
 ---
 
@@ -517,6 +532,7 @@ La solution pour les environnements complexes est de **réduire la complexité d
 
 ### Question 8
 *Expliquer dans le rapport les features que vous avez implémentées et leurs rôles. Présenter et analyser les résultats obtenus.*
+
 
 
 

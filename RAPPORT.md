@@ -51,9 +51,7 @@ Valeurs utilisées :
 - $\max Q((0,1),\cdot) = 0.0$ (pas encore appris)
 
 1. Calcul de la première partie :  
-$$
-(1-\alpha)\cdot Q_{\text{old}} = (1-0.5) \cdot 0.0 = 0.0
-$$
+$(1-\alpha)\cdot Q_{\text{old}} = (1-0.5) \cdot 0.0 = 0.0$
 
 2. Calcul de la valeur future pondérée :  
 $$
@@ -533,6 +531,7 @@ La solution pour les environnements complexes est de **réduire la complexité d
 
 ### Question 8
 *Expliquer dans le rapport les features que vous avez implémentées et leurs rôles. Présenter et analyser les résultats obtenus.*
+
 
 
 

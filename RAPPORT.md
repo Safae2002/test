@@ -422,7 +422,7 @@ Et tous ces calculs montrent que nous avons bien atteint les mêmes valeurs apr�
 ![Résultat après 4 épisodes](./screenshots/partie2_img1.png)
 
 #### Note sur l’affichage dans l’interface
-La **valeur 0.50** que l’on voit parfois affichée **sur la case verte (+1)** dans l’interface correspond en réalité à la Q-value de l’action **(2,2),E** (i.e. l’état _avant_ d’entrer dans le but). Dans l’affichage fourni, cette valeur a été positionnée visuellement près/à l’intérieur de la case du but pour **clarifier la lecture** et montrer la propagation, même si mathématiquement la Q-value appartient à l’état précédent `(2,2)` et non au terminal `(3,2)`.
+La **valeur 0.50** que l’on voit parfois affichée **sur la case verte (+1)** dans l’interface correspond en réalité à la Q-value de l’action **(2,2),E** (i.e. l’état _avant_ d’entrer dans le but). Dans l’affichage fourni, cette valeur a été positionnée visuellement près à l’intérieur de la case du but pour **clarifier la lecture** et montrer la propagation, même si mathématiquement la Q-value appartient à l’état précédent `(2,2)` et non au terminal `(3,2)`.
 
 ---
 
@@ -626,6 +626,7 @@ La solution pour les environnements complexes est de **réduire la complexité d
 
 ### Question 8
 *Expliquer dans le rapport les features que vous avez implémentées et leurs rôles. Présenter et analyser les résultats obtenus.*
+
 
 
 

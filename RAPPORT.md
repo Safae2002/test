@@ -176,9 +176,9 @@ Calculs → newQ = 0.0
 ##### Transition 4
 **(1,2) --E→ (2,2)**  
 Relation :
-\[
+$$
 Q_{\text{new}}((1,2),E) = 0.5\cdot 0 + 0.5\cdot\big(0 + 0.9\cdot\max Q((2,2),\cdot)\big)
-\]
+$$
 Valeurs :
 - oldQ = 0.0  
 - r = 0  
@@ -197,9 +197,9 @@ Calculs :
 ##### Transition 5
 **(2,2) --E→ (3,2 = +1)**  
 Relation :
-\[
+$$
 Q_{\text{new}}((2,2),E) = 0.5\cdot 0.500 + 0.5\cdot\big(1 + 0.9\cdot 0\big)
-\]
+$$
 Valeurs :
 - oldQ = 0.500  
 - r = 1 ; max Q((3,2)) = 0
@@ -244,9 +244,9 @@ Calculs → newQ = 0.0
 ##### Transition 4 (arrivée au -1)
 **(3,0) --N→ (3,1 = −1)**  
 Relation :
-\[
+$$
 Q_{\text{new}}((3,0),N) = 0.5\cdot 0 + 0.5\cdot\big(-1 + 0.9\cdot 0\big)
-\]
+$$
 Valeurs :
 - oldQ = 0.0 ; r = −1 ; max Q((3,1)) = 0.0 (terminal)
 Calculs :
@@ -278,9 +278,9 @@ Calculs :
 ##### Transition 3
 **(2,0) --E→ (3,0)**  
 Relation :
-\[
+$$
 Q_{\text{new}}((2,0),E) = 0.5\cdot 0 + 0.5\cdot\big(0 + 0.9\cdot \max Q((3,0),\cdot)\big)
-\]
+$$
 Valeurs :
 - oldQ((2,0),E) = 0.0  
 - r = 0  
@@ -299,9 +299,9 @@ Calculs :
 ##### Transition 4
 **(3,0) --N→ (3,1 = −1)**  
 Relation :
-\[
+$$
 Q_{\text{new}}((3,0),N) = 0.5\cdot(-0.500) + 0.5\cdot\big(-1 + 0.9\cdot 0\big)
-\]
+$$
 Valeurs :
 - oldQ = −0.500 ; r = −1 ; max Q((3,1)) = 0
 Calculs :
@@ -529,6 +529,7 @@ La solution pour les environnements complexes est de **réduire la complexité d
 
 ### Question 8
 *Expliquer dans le rapport les features que vous avez implémentées et leurs rôles. Présenter et analyser les résultats obtenus.*
+
 
 
 

@@ -68,73 +68,78 @@ $Q_{\text{new}}((0,0), N) = 0.0 + 0.0 = \mathbf{0.000}$
 
 ##### Transition 2
 **(0,1) --N→ (0,2)**  
-Relation :
-\[
-Q_{\text{new}}((0,1),N) = 0.5\cdot Q_{\text{old}}((0,1),N) + 0.5\cdot\big(0 + 0.9\cdot\max Q((0,2),\cdot)\big)
-\]
-Valeurs :
-- `Q_old = 0.0`, `r=0`, `max Q((0,2)) = 0.0`
-Calculs :
-- (1−α)·oldQ = 0.5×0.0 = 0.0  
-- γ·next = 0.9×0.0 = 0.0  
-- r + γ·next = 0 + 0.0 = 0.0  
-- α×(...) = 0.5×0.0 = 0.0  
-- newQ = 0.0 + 0.0 = 0.0  
-**->** `Q((0,1),N) = 0.000`
+Relation :  
+$$Q_{\text{new}}((0,1),N) = 0.5\cdot Q_{\text{old}}((0,1),N) + 0.5\cdot\big(0 + 0.9\cdot\max Q((0,2),\cdot)\big)$$  
+
+Valeurs :  
+- $Q_{\text{old}} = 0.0$, $r=0$, $\max Q((0,2)) = 0.0$  
+
+Calculs :  
+- $(1-\alpha)\cdot Q_{\text{old}} = 0.5 \cdot 0.0 = 0.0$  
+- $\gamma \cdot \max Q = 0.9 \cdot 0.0 = 0.0$  
+- $r + \gamma \cdot \max Q = 0 + 0.0 = 0.0$  
+- $\alpha \cdot (...) = 0.5 \cdot 0.0 = 0.0$  
+- $Q_{\text{new}} = 0.0 + 0.0 = 0.0$  
+
+**→** `Q((0,1),N) = 0.000`  
 
 ---
 
 ##### Transition 3
 **(0,2) --E→ (1,2)**  
-Relation :
-\[
-Q_{\text{new}}((0,2),E) = 0.5\cdot 0 + 0.5\cdot\big(0 + 0.9\cdot\max Q((1,2),\cdot)\big)
-\]
-Valeurs :
-- oldQ = 0.0 ; r = 0 ; max Q((1,2)) = 0.0
-Calculs :
-- (1−α)·oldQ = 0.5×0.0 = 0.0  
-- γ·next = 0.9×0.0 = 0.0  
-- α×(...) = 0.5×0.0 = 0.0  
-- newQ = 0.0  
-**->** `Q((0,2),E) = 0.000`
+Relation :  
+$Q_{\text{new}}((0,2),E) = 0.5\cdot 0 + 0.5\cdot\big(0 + 0.9\cdot\max Q((1,2),\cdot)\big)$  
+
+Valeurs :  
+- $Q_{\text{old}} = 0.0$, $r=0$, $\max Q((1,2)) = 0.0$  
+
+Calculs :  
+- $(1-\alpha)\cdot Q_{\text{old}} = 0.5 \cdot 0.0 = 0.0$  
+- $\gamma \cdot \max Q = 0.9 \cdot 0.0 = 0.0$  
+- $\alpha \cdot (...) = 0.5 \cdot 0.0 = 0.0$  
+- $Q_{\text{new}} = 0.0$  
+
+**→** `Q((0,2),E) = 0.000`  
 
 ---
 
 ##### Transition 4
 **(1,2) --E→ (2,2)**  
-Relation :
-\[
-Q_{\text{new}}((1,2),E) = 0.5\cdot 0 + 0.5\cdot\big(0 + 0.9\cdot\max Q((2,2),\cdot)\big)
-\]
-Valeurs :
-- oldQ = 0.0 ; r = 0 ; max Q((2,2)) = 0.0
-Calculs :
-- (1−α)·oldQ = 0.0  
-- γ·next = 0.9×0.0 = 0.0  
-- α×(...) = 0.5×0.0 = 0.0  
-- newQ = 0.0  
-**->** `Q((1,2),E) = 0.000`
+Relation :  
+$Q_{\text{new}}((1,2),E) = 0.5\cdot 0 + 0.5\cdot\big(0 + 0.9\cdot\max Q((2,2),\cdot)\big)$  
+
+Valeurs :  
+- $Q_{\text{old}} = 0.0$, $r=0$, $\max Q((2,2)) = 0.0$  
+
+Calculs :  
+- $(1-\alpha)\cdot Q_{\text{old}} = 0.0$  
+- $\gamma \cdot \max Q = 0.9 \cdot 0.0 = 0.0$  
+- $\alpha \cdot (...) = 0.5 \cdot 0.0 = 0.0$  
+- $Q_{\text{new}} = 0.0$  
+
+**→** `Q((1,2),E) = 0.000`  
 
 ---
 
 ##### Transition 5 (arrivée au +1)
 **(2,2) --E→ (3,2 = +1)**  
-Relation :
-\[
-Q_{\text{new}}((2,2),E) = 0.5\cdot Q_{\text{old}}((2,2),E) + 0.5\cdot\big(1 + 0.9\cdot\max Q((3,2),\cdot)\big)
-\]
-Valeurs :
-- oldQ = 0.0  
-- r = +1  
-- max Q((3,2)) = 0.0 (terminal)
-Calculs détaillés :
-- (1−α)·oldQ = 0.5 × 0.0 = 0.0  
-- γ·next = 0.9 × 0.0 = 0.0  
-- r + γ·next = 1 + 0.0 = 1.0  
-- α × (r + γ·next) = 0.5 × 1.0 = 0.5  
-- newQ = 0.0 + 0.5 = 0.5  
-**->** `Q((2,2),E) = 0.500`
+Relation :  
+$Q_{\text{new}}((2,2),E) = 0.5\cdot Q_{\text{old}}((2,2),E) + 0.5\cdot\big(1 + 0.9\cdot\max Q((3,2),\cdot)\big)$  
+
+Valeurs :  
+- $Q_{\text{old}} = 0.0$  
+- $r = +1$  
+- $\max Q((3,2)) = 0.0$ (terminal)  
+
+Calculs détaillés :  
+- $(1-\alpha)\cdot Q_{\text{old}} = 0.5 \cdot 0.0 = 0.0$  
+- $\gamma \cdot \max Q = 0.9 \cdot 0.0 = 0.0$  
+- $r + \gamma \cdot \max Q = 1 + 0.0 = 1.0$  
+- $\alpha \cdot (r + \gamma \cdot \max Q) = 0.5 \cdot 1.0 = 0.5$  
+- $Q_{\text{new}} = 0.0 + 0.5 = 0.5$  
+
+**→** `Q((2,2),E) = 0.500`
+
 
 ---
 
@@ -524,6 +529,7 @@ La solution pour les environnements complexes est de **réduire la complexité d
 
 ### Question 8
 *Expliquer dans le rapport les features que vous avez implémentées et leurs rôles. Présenter et analyser les résultats obtenus.*
+
 
 
 

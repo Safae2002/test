@@ -231,9 +231,8 @@ Calculs :
 ##### Transition 1
 **(0,0) --E→ (1,0)**  
 Relation :  
-$$
-Q_{\text{new}}((0,0),E) = (1-0.5)\cdot Q_{\text{old}}((0,0),E) + 0.5\cdot\big(0 + 0.9\cdot\max Q((1,0),\cdot)\big)
-$$
+$Q_{\text{new}}((0,0),E) = (1-0.5)\cdot Q_{\text{old}}((0,0),E) + 0.5\cdot\big(0 + 0.9\cdot\max Q((1,0),\cdot)\big)$
+
 
 Valeurs utilisées :  
 - $Q_{\text{old}}((0,0),E) = 0.0$  
@@ -254,9 +253,9 @@ Calculs :
 ##### Transition 2
 **(1,0) --E→ (2,0)**  
 Relation :  
-$$
-Q_{\text{new}}((1,0),E) = (1-0.5)\cdot Q_{\text{old}}((1,0),E) + 0.5\cdot\big(0 + 0.9\cdot\max Q((2,0),\cdot)\big)
-$$
+
+$Q_{\text{new}}((1,0),E) = (1-0.5)\cdot Q_{\text{old}}((1,0),E) + 0.5\cdot\big(0 + 0.9\cdot\max Q((2,0),\cdot)\big)$
+
 
 Valeurs utilisées :  
 - $Q_{\text{old}}((1,0),E) = 0.0$  
@@ -277,9 +276,7 @@ Calculs :
 ##### Transition 3
 **(2,0) --E→ (3,0)**  
 Relation :  
-$$
-Q_{\text{new}}((2,0),E) = (1-0.5)\cdot Q_{\text{old}}((2,0),E) + 0.5\cdot\big(0 + 0.9\cdot\max Q((3,0),\cdot)\big)
-$$
+$Q_{\text{new}}((2,0),E) = (1-0.5)\cdot Q_{\text{old}}((2,0),E) + 0.5\cdot\big(0 + 0.9\cdot\max Q((3,0),\cdot)\big)$
 
 Valeurs utilisées :  
 - $Q_{\text{old}}((2,0),E) = 0.0$  
@@ -300,9 +297,8 @@ Calculs :
 ##### Transition 4 (arrivée au −1)
 **(3,0) --N→ (3,1 = −1)**  
 Relation :  
-$$
-Q_{\text{new}}((3,0),N) = (1-0.5)\cdot Q_{\text{old}}((3,0),N) + 0.5\cdot\big(-1 + 0.9\cdot\max Q((3,1),\cdot)\big)
-$$
+
+$Q_{\text{new}}((3,0),N) = (1-0.5)\cdot Q_{\text{old}}((3,0),N) + 0.5\cdot\big(-1 + 0.9\cdot\max Q((3,1),\cdot)\big)$
 
 Valeurs utilisées :  
 - $Q_{\text{old}}((3,0),N) = 0.0$  
@@ -321,9 +317,8 @@ Calculs :
 ##### Transition 4 (arrivée au −1)
 **(3,0) --N→ (3,1 = −1)**  
 Relation :  
-$$
-Q_{\text{new}}((3,0),N) = (1-0.5)\cdot 0.0 \;+\; 0.5 \cdot \big(-1 + 0.9 \cdot 0.0\big)
-$$
+
+$Q_{\text{new}}((3,0),N) = (1-0.5)\cdot 0.0 \;+\; 0.5 \cdot \big(-1 + 0.9 \cdot 0.0\big)$
 
 Valeurs :  
 - oldQ((3,0),N) = 0.0  
@@ -347,9 +342,9 @@ Calculs :
 ##### Transition 1
 **(0,0) --E→ (1,0)**  
 Relation :  
-$$
-Q_{\text{new}}((0,0),E) = (1-0.5)\cdot Q_{\text{old}}((0,0),E) + 0.5\cdot\big(0 + 0.9\cdot \max Q((1,0),\cdot)\big)
-$$
+
+$Q_{\text{new}}((0,0),E) = (1-0.5)\cdot Q_{\text{old}}((0,0),E) + 0.5\cdot\big(0 + 0.9\cdot \max Q((1,0),\cdot)\big)$
+
 
 Valeurs utilisées :  
 - $Q_{\text{old}}((0,0),E) = 0.0$  
@@ -370,9 +365,8 @@ Calculs :
 ##### Transition 2
 **(1,0) --E→ (2,0)**  
 Relation :  
-$$
-Q_{\text{new}}((1,0),E) = (1-0.5)\cdot Q_{\text{old}}((1,0),E) + 0.5\cdot\big(0 + 0.9\cdot \max Q((2,0),\cdot)\big)
-$$
+
+$Q_{\text{new}}((1,0),E) = (1-0.5)\cdot Q_{\text{old}}((1,0),E) + 0.5\cdot\big(0 + 0.9\cdot \max Q((2,0),\cdot)\big)$
 
 Valeurs utilisées :  
 - $Q_{\text{old}}((1,0),E) = 0.0$  
@@ -393,9 +387,8 @@ Calculs :
 ##### Transition 3
 **(2,0) --E→ (3,0)**  
 Relation :  
-$$
-Q_{\text{new}}((2,0),E) = (1-0.5)\cdot Q_{\text{old}}((2,0),E) + 0.5\cdot\big(0 + 0.9\cdot \max Q((3,0),\cdot)\big)
-$$  
+
+$Q_{\text{new}}((2,0),E) = (1-0.5)\cdot Q_{\text{old}}((2,0),E) + 0.5\cdot\big(0 + 0.9\cdot \max Q((3,0),\cdot)\big)$  
 
 Valeurs utilisées :  
 - $Q_{\text{old}}((2,0),E) = 0.0$  
@@ -416,9 +409,8 @@ Calculs :
 ##### Transition 4
 **(3,0) --N→ (3,1 = −1)**  
 Relation :  
-$$
-Q_{\text{new}}((3,0),N) = (1-0.5)\cdot Q_{\text{old}}((3,0),N) + 0.5\cdot\big(-1 + 0.9 \cdot \max Q((3,1),\cdot)\big)
-$$  
+
+$Q_{\text{new}}((3,0),N) = (1-0.5)\cdot Q_{\text{old}}((3,0),N) + 0.5\cdot\big(-1 + 0.9 \cdot \max Q((3,1),\cdot)\big)$  
 
 Valeurs utilisées :  
 - $Q_{\text{old}}((3,0),N) = -0.500$  
@@ -650,6 +642,7 @@ La solution pour les environnements complexes est de **réduire la complexité d
 
 ### Question 8
 *Expliquer dans le rapport les features que vous avez implémentées et leurs rôles. Présenter et analyser les résultats obtenus.*
+
 
 
 

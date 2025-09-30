@@ -50,22 +50,30 @@ Valeurs utilisées :
 - $r = 0$  
 - $\max Q((0,1),\cdot) = 0.0$ (pas encore appris)
 
-Calculs pas à pas :
-$$
-(1-0.5)\cdot Q_{\text{old}} = 0.5 \times 0.0 = 0.0
-$$
-$$
-\gamma \cdot \max Q = 0.9 \times 0.0 = 0.0
-$$
-$$
+1. Calcul de la première partie :  
+\[
+(1-\alpha)\cdot Q_{\text{old}} = (1-0.5) \cdot 0.0 = 0.0
+\]
+
+2. Calcul de la valeur future pondérée :  
+\[
+\gamma \cdot \max Q = 0.9 \cdot 0.0 = 0.0
+\]
+
+3. Ajout de la récompense :  
+\[
 r + \gamma \cdot \max Q = 0 + 0.0 = 0.0
-$$
-$$
-\alpha \times (...) = 0.5 \times 0.0 = 0.0
-$$
-$$
-Q_{\text{new}}((0,0),N) = 0.0 + 0.0 = \mathbf{0.000}
-$$
+\]
+
+4. Multiplication par le taux d'apprentissage :  
+\[
+\alpha \cdot (r + \gamma \cdot \max Q) = 0.5 \cdot 0.0 = 0.0
+\]
+
+5. Mise à jour de Q :  
+\[
+Q_{\text{new}}((0,0), N) = 0.0 + 0.0 = \mathbf{0.000}
+\]
 
 ##### Transition 2
 **(0,1) --N→ (0,2)**  
@@ -525,6 +533,7 @@ La solution pour les environnements complexes est de **réduire la complexité d
 
 ### Question 8
 *Expliquer dans le rapport les features que vous avez implémentées et leurs rôles. Présenter et analyser les résultats obtenus.*
+
 
 
 

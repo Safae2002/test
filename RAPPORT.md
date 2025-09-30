@@ -83,7 +83,6 @@ Calculs :
 
 **→** `Q((0,1),N) = 0.000`  
 
----
 
 ##### Transition 3
 **(0,2) --E→ (1,2)**  
@@ -101,7 +100,6 @@ Calculs :
 
 **→** `Q((0,2),E) = 0.000`  
 
----
 
 ##### Transition 4
 **(1,2) --E→ (2,2)**  
@@ -119,7 +117,6 @@ Calculs :
 
 **→** `Q((1,2),E) = 0.000`  
 
----
 
 ##### Transition 5 (arrivée au +1)
 **(2,2) --E→ (3,2 = +1)**  
@@ -157,7 +154,6 @@ Calculs :
 
 **→** `Q((0,0),N) = 0.000`  
 
----
 
 ##### Transition 2
 **(0,1) --N→ (0,2)**  
@@ -171,7 +167,6 @@ Calculs :
 
 **→** `Q((0,1),N) = 0.000`  
 
----
 
 ##### Transition 3
 **(0,2) --E→ (1,2)**  
@@ -184,8 +179,6 @@ Calculs :
 - $Q_{\text{new}} = 0.0$  
 
 **→** `Q((0,2),E) = 0.000`  
-
----
 
 ##### Transition 4
 **(1,2) --E→ (2,2)**  
@@ -203,7 +196,6 @@ Calculs :
 
 **→** `Q((1,2),E) = 0.225`  
 
----
 
 ##### Transition 5
 **(2,2) --E→ (3,2 = +1)**  
@@ -221,12 +213,11 @@ Calculs :
 
 **→** `Q((2,2),E) = 0.750`
 
+---
 
 #### Épisode 3 — trajet Est→Est→Est→Nord → arrive à (3,1) = −1
 
 (Début épisode 3 : `Q((2,2),E)=0.750`, `Q((1,2),E)=0.225`, autres liés au haut ; bas/droite encore 0.)
-
----
 
 ##### Transition 1
 **(0,0) --E→ (1,0)**  
@@ -248,7 +239,6 @@ Calculs :
 
 **->** `Q((0,0),E) = 0.000`
 
----
 
 ##### Transition 2
 **(1,0) --E→ (2,0)**  
@@ -271,7 +261,6 @@ Calculs :
 
 **->** `Q((1,0),E) = 0.000`
 
----
 
 ##### Transition 3
 **(2,0) --E→ (3,0)**  
@@ -292,7 +281,6 @@ Calculs :
 
 **->** `Q((2,0),E) = 0.000`
 
----
 
 ##### Transition 4 (arrivée au −1)
 **(3,0) --N→ (3,1 = −1)**  
@@ -337,8 +325,6 @@ Calculs :
 
 #### Épisode 4 — même trajet → -1 (début avec Q((3,0),N) = −0.500)
 
----
-
 ##### Transition 1
 **(0,0) --E→ (1,0)**  
 Relation :  
@@ -360,7 +346,6 @@ Calculs :
 
 **->** `Q((0,0),E) = 0.000`
 
----
 
 ##### Transition 2
 **(1,0) --E→ (2,0)**  
@@ -382,7 +367,6 @@ Calculs :
 
 **->** `Q((1,0),E) = 0.000`
 
----
 
 ##### Transition 3
 **(2,0) --E→ (3,0)**  
@@ -404,7 +388,6 @@ Calculs :
 
 **->** `Q((2,0),E) = -0.225`
 
----
 
 ##### Transition 4
 **(3,0) --N→ (3,1 = −1)**  
@@ -435,7 +418,8 @@ Calculs :
 - `Q((2,0),E) = -0.225`  
 - Toutes les autres paires visitées restent `0.000`
 
----
+Et tous ces calculs montrent que nous avons bien atteint les mêmes valeurs après 4 épisodes, comme l’illustre l’image suivante:
+![Résultat après 4 épisodes](./screenshots/partie2_img1.png)
 
 #### Note sur l’affichage dans l’interface
 La **valeur 0.50** que l’on voit parfois affichée **sur la case verte (+1)** dans l’interface correspond en réalité à la Q-value de l’action **(2,2),E** (i.e. l’état _avant_ d’entrer dans le but). Dans l’affichage fourni, cette valeur a été positionnée visuellement près/à l’intérieur de la case du but pour **clarifier la lecture** et montrer la propagation, même si mathématiquement la Q-value appartient à l’état précédent `(2,2)` et non au terminal `(3,2)`.
@@ -642,6 +626,7 @@ La solution pour les environnements complexes est de **réduire la complexité d
 
 ### Question 8
 *Expliquer dans le rapport les features que vous avez implémentées et leurs rôles. Présenter et analyser les résultats obtenus.*
+
 
 
 

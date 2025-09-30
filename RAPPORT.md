@@ -579,15 +579,6 @@ Son comportement reste proche de l’aléatoire.
 **Conclusion partielle :** Dans cet environnement plus complexe, le Q-learning tabulaire échoue.
 
 
-#### 2. Explication de la différence de performance
-
-La différence de performance entre les deux grilles vient principalement de la **taille de l’espace d’états** :
-
-| Environnement | Espace d'États | Résultat du Q-Learning Tabulaire (2000 épisodes) |
-| :--- | :--- | :--- |
-| **`smallGrid`** | Relativement **petit**. Pacman, le fantôme et la nourriture n’ont que quelques positions possibles. | L’exploration de la majorité des états est **possible** en 2000 épisodes. **Succès.** |
-| **`mediumGrid`** | **Explosion combinatoire** de l'espace d'états (plus d'un million d'états distincts). Pacman, les fantômes, la nourriture restante, les capsules, etc. | Impossible d'explorer correctement cet espace en seulement 2000 épisodes. **Échec.** |
-
 ##### Inefficacité du Q-Learning Tabulaire sur grands espaces
 Le Q-learning tabulaire ne fait **aucune généralisation** : il traite chaque état indépendamment des autres.
 * Même si Pacman apprend qu’une situation donnée est favorable, il ne peut pas transférer cette connaissance à une situation similaire (par exemple, « un fantôme à gauche » n'est pas généralisé à « un fantôme deux cases à gauche »).
@@ -617,30 +608,8 @@ Pour rendre l'apprentissage efficace sur des grilles plus grandes, il faut soit 
 * Utiliser un **$\gamma$** (facteur d'actualisation) **plus élevé** pour mieux valoriser les objectifs à long terme.
 
 
-#### Conclusion générale
-
-* **`SmallGrid`** : L'espace d'états est petit $\rightarrow$ le **Q-learning tabulaire est suffisant**.
-* **`MediumGrid`** : L'espace d'états est immense $\rightarrow$ le **Q-learning tabulaire devient inefficace**.
-
-La solution pour les environnements complexes est de **réduire la complexité de l'espace d'états** (features relatives) ou d'utiliser une **approximation des Q-valeurs** pour permettre la généralisation entre états.
-
 ### Question 8
 *Expliquer dans le rapport les features que vous avez implémentées et leurs rôles. Présenter et analyser les résultats obtenus.*
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

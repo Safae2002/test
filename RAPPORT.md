@@ -147,80 +147,96 @@ Calculs détaillés :
 
 ##### Transition 1
 **(0,0) --N→ (0,1)**  
-Relation et valeurs :
-- oldQ((0,0),N) = 0.0 ; max Q((0,1)) = 0.0
-Calculs :
-- (1−α)·oldQ = 0.5×0.0 = 0.0  
-- γ·next = 0.9×0.0 = 0.0  
-- α×(...) = 0.5×0.0 = 0.0  
-**->** `Q((0,0),N) = 0.000`
+Valeurs : $Q_{\text{old}}((0,0),N) = 0.0$, $\max Q((0,1)) = 0.0$  
+
+Calculs :  
+- $(1-\alpha)\cdot Q_{\text{old}} = 0.5 \cdot 0.0 = 0.0$  
+- $\gamma \cdot \max Q = 0.9 \cdot 0.0 = 0.0$  
+- $\alpha \cdot (...) = 0.5 \cdot 0.0 = 0.0$  
+- $Q_{\text{new}} = 0.0 + 0.0 = 0.0$  
+
+**→** `Q((0,0),N) = 0.000`  
 
 ---
 
 ##### Transition 2
 **(0,1) --N→ (0,2)**  
-- oldQ = 0.0 ; max Q((0,2)) = 0.0  
-Calculs → newQ = 0.0  
-**->** `Q((0,1),N) = 0.000`
+Valeurs : $Q_{\text{old}} = 0.0$, $\max Q((0,2)) = 0.0$  
+
+Calculs :  
+- $(1-\alpha)\cdot Q_{\text{old}} = 0.5 \cdot 0.0 = 0.0$  
+- $\gamma \cdot \max Q = 0.9 \cdot 0.0 = 0.0$  
+- $\alpha \cdot (...) = 0.5 \cdot 0.0 = 0.0$  
+- $Q_{\text{new}} = 0.0$  
+
+**→** `Q((0,1),N) = 0.000`  
 
 ---
 
 ##### Transition 3
 **(0,2) --E→ (1,2)**  
-- oldQ = 0.0 ; max Q((1,2)) = 0.0  
-Calculs → newQ = 0.0  
-**->** `Q((0,2),E) = 0.000`
+Valeurs : $Q_{\text{old}} = 0.0$, $\max Q((1,2)) = 0.0$  
+
+Calculs :  
+- $(1-\alpha)\cdot Q_{\text{old}} = 0.5 \cdot 0.0 = 0.0$  
+- $\gamma \cdot \max Q = 0.9 \cdot 0.0 = 0.0$  
+- $\alpha \cdot (...) = 0.5 \cdot 0.0 = 0.0$  
+- $Q_{\text{new}} = 0.0$  
+
+**→** `Q((0,2),E) = 0.000`  
 
 ---
 
 ##### Transition 4
 **(1,2) --E→ (2,2)**  
-Relation :
-$$
-Q_{\text{new}}((1,2),E) = 0.5\cdot 0 + 0.5\cdot\big(0 + 0.9\cdot\max Q((2,2),\cdot)\big)
-$$
-Valeurs :
-- oldQ = 0.0  
-- r = 0  
-- max Q((2,2)) = 0.500 (issue épisode 1)
-Calculs :
-- (1−α)·oldQ = 0.5 × 0.0 = 0.0  
-- γ·next = 0.9 × 0.500 = 0.450  
-  - (détaillé : 9 × 5 = 45 → avec 2 décimales → 0.450)  
-- r + γ·next = 0 + 0.450 = 0.450  
-- α × (r + γ·next) = 0.5 × 0.450 = 0.225  
-- newQ = 0.0 + 0.225 = 0.225  
-**->** `Q((1,2),E) = 0.225`
+Relation :  
+$Q_{\text{new}}((1,2),E) = 0.5 \cdot Q_{\text{old}}((1,2),E) + 0.5 \cdot \big(0 + 0.9 \cdot \max Q((2,2),\cdot)\big)$  
+
+Valeurs : $Q_{\text{old}} = 0.0$, $r=0$, $\max Q((2,2)) = 0.500$ (hérité de l’épisode 1)  
+
+Calculs :  
+- $(1-\alpha)\cdot Q_{\text{old}} = 0.5 \cdot 0.0 = 0.0$  
+- $\gamma \cdot \max Q = 0.9 \cdot 0.500 = 0.450$  
+- $r + \gamma \cdot \max Q = 0 + 0.450 = 0.450$  
+- $\alpha \cdot (r + \gamma \cdot \max Q) = 0.5 \cdot 0.450 = 0.225$  
+- $Q_{\text{new}} = 0.0 + 0.225 = 0.225$  
+
+**→** `Q((1,2),E) = 0.225`  
 
 ---
 
 ##### Transition 5
 **(2,2) --E→ (3,2 = +1)**  
-Relation :
-$$
-Q_{\text{new}}((2,2),E) = 0.5\cdot 0.500 + 0.5\cdot\big(1 + 0.9\cdot 0\big)
-$$
-Valeurs :
-- oldQ = 0.500  
-- r = 1 ; max Q((3,2)) = 0
-Calculs détaillés :
-- (1−α)·oldQ = 0.5 × 0.500 = 0.250  
-- γ·next = 0.9 × 0.0 = 0.0  
-- r + γ·next = 1 + 0 = 1.0  
-- α × (r + γ·next) = 0.5 × 1.0 = 0.5  
-- newQ = 0.250 + 0.5 = 0.750  
-**->** `Q((2,2),E) = 0.750`
+Relation :  
+$Q_{\text{new}}((2,2),E) = 0.5 \cdot Q_{\text{old}}((2,2),E) + 0.5 \cdot \big(1 + 0.9 \cdot 0\big)$  
 
----
+Valeurs : $Q_{\text{old}} = 0.500$, $r = 1$, $\max Q((3,2)) = 0$ (terminal)  
+
+Calculs :  
+- $(1-\alpha)\cdot Q_{\text{old}} = 0.5 \cdot 0.500 = 0.250$  
+- $\gamma \cdot \max Q = 0.9 \cdot 0.0 = 0.0$  
+- $r + \gamma \cdot \max Q = 1 + 0.0 = 1.0$  
+- $\alpha \cdot (r + \gamma \cdot \max Q) = 0.5 \cdot 1.0 = 0.5$  
+- $Q_{\text{new}} = 0.250 + 0.5 = 0.750$  
+
+**→** `Q((2,2),E) = 0.750`
+
 
 #### Épisode 3 — trajet Est→Est→Est→Nord → arrive à (3,1) = −1
 
 (Début épisode 3 : `Q((2,2),E)=0.750`, `Q((1,2),E)=0.225`, autres liés au haut ; bas/droite encore 0.)
 
+---
+
 ##### Transition 1
 **(0,0) --E→ (1,0)**  
 - oldQ((0,0),E) = 0.0 ; max Q((1,0)) = 0.0  
-Calculs → newQ = 0.0  
+Calculs :  
+- (1−α)·oldQ = 0.5 × 0.0 = 0.0  
+- γ·next = 0.9 × 0.0 = 0.0  
+- r + γ·next = 0 + 0.0 = 0.0  
+- α × (...) = 0.5 × 0.0 = 0.0  
+- newQ = 0.0 + 0.0 = 0.0  
 **->** `Q((0,0),E) = 0.000`
 
 ---
@@ -228,7 +244,12 @@ Calculs → newQ = 0.0
 ##### Transition 2
 **(1,0) --E→ (2,0)**  
 - oldQ((1,0),E) = 0.0 ; max Q((2,0)) = 0.0  
-Calculs → newQ = 0.0  
+Calculs :  
+- (1−α)·oldQ = 0.5 × 0.0 = 0.0  
+- γ·next = 0.9 × 0.0 = 0.0  
+- r + γ·next = 0 + 0.0 = 0.0  
+- α × (...) = 0.5 × 0.0 = 0.0  
+- newQ = 0.0 + 0.0 = 0.0  
 **->** `Q((1,0),E) = 0.000`
 
 ---
@@ -236,83 +257,112 @@ Calculs → newQ = 0.0
 ##### Transition 3
 **(2,0) --E→ (3,0)**  
 - oldQ((2,0),E) = 0.0 ; max Q((3,0)) = 0.0  
-Calculs → newQ = 0.0  
+Calculs :  
+- (1−α)·oldQ = 0.5 × 0.0 = 0.0  
+- γ·next = 0.9 × 0.0 = 0.0  
+- r + γ·next = 0 + 0.0 = 0.0  
+- α × (...) = 0.5 × 0.0 = 0.0  
+- newQ = 0.0 + 0.0 = 0.0  
 **->** `Q((2,0),E) = 0.000`
 
 ---
 
-##### Transition 4 (arrivée au -1)
+##### Transition 4 (arrivée au −1)
 **(3,0) --N→ (3,1 = −1)**  
-Relation :
+Relation :  
 $$
-Q_{\text{new}}((3,0),N) = 0.5\cdot 0 + 0.5\cdot\big(-1 + 0.9\cdot 0\big)
+Q_{\text{new}}((3,0),N) = (1-0.5)\cdot 0.0 \;+\; 0.5 \cdot \big(-1 + 0.9 \cdot 0.0\big)
 $$
-Valeurs :
-- oldQ = 0.0 ; r = −1 ; max Q((3,1)) = 0.0 (terminal)
-Calculs :
-- (1−α)·oldQ = 0.5×0.0 = 0.0  
-- γ·next = 0.9×0.0 = 0.0  
+
+Valeurs :  
+- oldQ((3,0),N) = 0.0  
+- r = −1  
+- max Q((3,1)) = 0.0 (état terminal)  
+
+Calculs :  
+- (1−α)·oldQ = 0.5 × 0.0 = 0.0  
+- γ·next = 0.9 × 0.0 = 0.0  
 - r + γ·next = −1 + 0.0 = −1.0  
-- α×(...) = 0.5 × (−1.0) = −0.5  
+- α × (...) = 0.5 × (−1.0) = −0.5  
 - newQ = 0.0 + (−0.5) = −0.5  
+
 **->** `Q((3,0),N) = -0.500`
 
----
 
 #### Épisode 4 — même trajet → -1 (début avec Q((3,0),N) = −0.500)
 
+---
+
 ##### Transition 1
 **(0,0) --E→ (1,0)**  
-- oldQ((0,0),E) = 0.0 ; max Q((1,0)) = 0.0 → newQ = 0.0  
+- oldQ((0,0),E) = 0.0 ; max Q((1,0)) = 0.0  
+Calculs :  
+- (1−α)·oldQ = 0.5 × 0.0 = 0.0  
+- γ·next = 0.9 × 0.0 = 0.0  
+- r + γ·next = 0 + 0.0 = 0.0  
+- α × (...) = 0.5 × 0.0 = 0.0  
+- newQ = 0.0 + 0.0 = 0.0  
 **->** `Q((0,0),E) = 0.000`
 
 ---
 
 ##### Transition 2
 **(1,0) --E→ (2,0)**  
-- oldQ((1,0),E) = 0.0 ; max Q((2,0)) = 0.0 → newQ = 0.0  
+- oldQ((1,0),E) = 0.0 ; max Q((2,0)) = 0.0  
+Calculs :  
+- (1−α)·oldQ = 0.5 × 0.0 = 0.0  
+- γ·next = 0.9 × 0.0 = 0.0  
+- r + γ·next = 0 + 0.0 = 0.0  
+- α × (...) = 0.5 × 0.0 = 0.0  
+- newQ = 0.0 + 0.0 = 0.0  
 **->** `Q((1,0),E) = 0.000`
 
 ---
 
 ##### Transition 3
 **(2,0) --E→ (3,0)**  
-Relation :
+Relation :  
 $$
-Q_{\text{new}}((2,0),E) = 0.5\cdot 0 + 0.5\cdot\big(0 + 0.9\cdot \max Q((3,0),\cdot)\big)
-$$
-Valeurs :
+Q_{\text{new}}((2,0),E) = 0.5\cdot 0.0 + 0.5\cdot\big(0 + 0.9 \cdot \max Q((3,0),\cdot)\big)
+$$ 
+
+Valeurs :  
 - oldQ((2,0),E) = 0.0  
 - r = 0  
-- max Q((3,0)) = Q((3,0),N) = −0.500 (issue épisode 3)
-Calculs :
+- max Q((3,0)) = Q((3,0),N) = −0.500 (issue épisode 3)  
+
+Calculs :  
 - (1−α)·oldQ = 0.5 × 0.0 = 0.0  
 - γ·next = 0.9 × (−0.500) = −0.450  
-  - (détail : 9 × 5 = 45 → 0.450 puis signe −)  
 - r + γ·next = 0 + (−0.450) = −0.450  
 - α × (...) = 0.5 × (−0.450) = −0.225  
 - newQ = 0.0 + (−0.225) = −0.225  
+
 **->** `Q((2,0),E) = -0.225`
 
 ---
 
 ##### Transition 4
 **(3,0) --N→ (3,1 = −1)**  
-Relation :
+Relation :  
 $$
-Q_{\text{new}}((3,0),N) = 0.5\cdot(-0.500) + 0.5\cdot\big(-1 + 0.9\cdot 0\big)
-$$
-Valeurs :
-- oldQ = −0.500 ; r = −1 ; max Q((3,1)) = 0
-Calculs :
+Q_{\text{new}}((3,0),N) = 0.5\cdot(-0.500) + 0.5\cdot\big(-1 + 0.9 \cdot 0.0\big)
+$$  
+
+Valeurs :  
+- oldQ((3,0),N) = −0.500  
+- r = −1  
+- max Q((3,1)) = 0.0  
+
+Calculs :  
 - (1−α)·oldQ = 0.5 × (−0.500) = −0.250  
-- γ·next = 0.9 × 0 = 0.0  
-- r + γ·next = −1 + 0 = −1.0  
+- γ·next = 0.9 × 0.0 = 0.0  
+- r + γ·next = −1 + 0.0 = −1.0  
 - α × (r + γ·next) = 0.5 × (−1.0) = −0.5  
 - newQ = (−0.250) + (−0.5) = −0.750  
+
 **->** `Q((3,0),N) = -0.750`
 
----
 
 #### Récapitulatif final (après les 4 épisodes)
 
@@ -529,6 +579,7 @@ La solution pour les environnements complexes est de **réduire la complexité d
 
 ### Question 8
 *Expliquer dans le rapport les features que vous avez implémentées et leurs rôles. Présenter et analyser les résultats obtenus.*
+
 
 
 
